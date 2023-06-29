@@ -14,16 +14,11 @@
             "name": "Back End",
             "type": "coreclr",
             "request": "launch",
-            "preLaunchTask": "build",
+            "preLaunchTask": "build backend",
             "program": "${workspaceFolder}/SampleApp/BackEnd/bin/Debug/net8.0/BackEnd.dll",
             "args": [],
             "cwd": "${workspaceFolder}/SampleApp/BackEnd",
             "stopAtEntry": false,
-            "serverReadyAction": {
-                "action": "openExternally",
-                "pattern": "\\bNow listening on:\\s+(https?://\\S+)",
-                "uriFormat": "%s/swagger"
-            },
             "env": {
                 "ASPNETCORE_ENVIRONMENT": "Development"
             },
@@ -35,14 +30,15 @@
             "name": "Front End",
             "type": "coreclr",
             "request": "launch",
-            "preLaunchTask": "build",
+            "preLaunchTask": "build frontend",
             "program": "${workspaceFolder}/SampleApp/FrontEnd/bin/Debug/net8.0/FrontEnd.dll",
             "args": [],
             "cwd": "${workspaceFolder}/SampleApp/FrontEnd",
             "stopAtEntry": false,
             "serverReadyAction": {
                 "action": "openExternally",
-                "pattern": "\\bNow listening on:\\s+(https?://\\S+)"
+                "pattern": "\\bNow listening on:\\s+(https?://\\S+)",
+                "uriFormat": "%s/"
             },
             "env": {
                 "ASPNETCORE_ENVIRONMENT": "Development"
