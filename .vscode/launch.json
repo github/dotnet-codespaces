@@ -11,6 +11,11 @@
     ],
     "configurations": [
         {
+            "type": "node",
+            "name": "Run All",
+            "request": "launch"
+        },
+        {
             "name": "Back End",
             "type": "coreclr",
             "request": "launch",
