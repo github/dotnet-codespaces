@@ -22,6 +22,7 @@
                 "GitHub.copilot-nightly",
                 "GitHub.vscode-github-actions",
                 "ms-dotnettools.vscode-dotnet-runtime",
+                "ms-dotnettools.csdevkit",
                 "ms-dotnetools.csharp"
             ]
         }
