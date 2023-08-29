@@ -1,37 +1,41 @@
-# .NET on Codespaces
+# GitHub Codespaces ♥️ .NET 8
 
-Copy for Claudia to write
+Want to try out the latest performance improvements coming with .NET 8 for web development? 
+
+This repo builds a Weather API using Minimal APIs, opens Swagger so you can call and test the API, and displays the data in a web application using Blazor with .NET 8. 
+
+We've given you both a frontend and backend to play around with and where you go from here is up to you!
+
+Everything you do here is contained within this one codespace. There is no repository on GitHub yet. If and when you’re ready you can click "Publish Branch" and we’ll create your repository and push up your project. If you were just exploring then and have no further need for this code then you can simply delete your codespace and it's gone forever.
+
+### Run Options
 
 [![Open in GitHub Codespaces](https://img.shields.io/static/v1?style=for-the-badge&label=GitHub+Codespaces&message=Open&color=lightgrey&logo=github)](https://codespaces.new/bradygaster/dotnet-codespace)
 [![Open in Dev Container](https://img.shields.io/static/v1?style=for-the-badge&label=Dev+Container&message=Open&color=blue&logo=visualstudiocode)](https://vscode.dev/redirect?url=vscode://ms-vscode-remote.remote-containers/cloneInVolume?url=https://github.com/bradygaster/dotnet-codespace)
 
+You can also run this repository locally by following these instructions: 
+1. Clone the repo to your local machine `git clone https://github.com/bradygaster/dotnet-codespace`
+1. Open repo in VS Code
+
 ## Getting started
 
 1. **📤 One-click setup**: [Open a new Codespace](https://codespaces.new/bradygaster/dotnet-codespace), giving you a fully configured cloud developer environment.
-3. **▶️ Run, one-click again**: Use VS Code's built-in *Run* command and open the forwarded ports *8080* and *8081* in your browser.
-5. **🔄 Iterate quickly:** Codespaces updates the server on each save, and VS Code's debugger lets you dig into the code execution.
+2. **▶️ Run all, one-click again**: Use VS Code's built-in *Run* command and open the forwarded ports *8080* and *8081* in your browser. 
 
-## Run
+![](images/RunAll.png)
 
-This repository can be run in Codespaces, in Dev Containers, or locally on your development machine. 
+3. The Blazor web app and Swagger tabs should now be open on your browser. On Swagger, click "Try it out" and "Execute" to call and test the API. 
 
-### Run in Codespaces
-
-1. Click here to open in GitHub Codespaces
-
-    [![Open in GitHub Codespaces](https://img.shields.io/static/v1?style=for-the-badge&label=GitHub+Codespaces&message=Open&color=lightgrey&logo=github)](https://codespaces.new/bradygaster/dotnet-codespace)
-
-### Run in Dev Container
-
-1. Click here to open in Dev Container
-
-    [![Open in Dev Container](https://img.shields.io/static/v1?style=for-the-badge&label=Dev+Container&message=Open&color=blue&logo=visualstudiocode)](https://vscode.dev/redirect?url=vscode://ms-vscode-remote.remote-containers/cloneInVolume?url=https://github.com/bradygaster/dotnet-codespace)
+![](images/BlazorApp.png)
+![](images/Swagger.png)
 
 
-### Run Locally
+4. **🔄 Iterate quickly:** Codespaces updates the server on each save, and VS Code's debugger lets you dig into the code execution.
 
-1. Clone the repo to your local machine `git clone https://github.com/bradygaster/dotnet-codespace`
-1. Open repo in VS Code
+5. To stop running, return to VS Code, and click Stop twice in the debug toolbar. 
+
+![](images/StopRun.png)
+
 
 ## Contributing
 
