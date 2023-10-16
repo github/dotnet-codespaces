@@ -1,6 +1,6 @@
 {
     "name": ".NET in Codespaces",
-    "image": "mcr.microsoft.com/dotnet/sdk: 8.0-preview",
+    "image": "mcr.microsoft.com/dotnet/sdk:8.0-preview",
     "features": {
         "ghcr.io/devcontainers/features/docker-from-docker:1": {
             "version": "20.10"
