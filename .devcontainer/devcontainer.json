@@ -23,7 +23,6 @@
         "vscode": {
             "extensions": [
                 "ms-vscode.vscode-node-azure-pack",
-                "github.vscode-github-actions",
                 "GitHub.copilot",
                 "GitHub.vscode-github-actions",
                 "ms-dotnettools.vscode-dotnet-runtime",
