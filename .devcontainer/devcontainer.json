@@ -24,10 +24,12 @@
             "extensions": [
                 "ms-vscode.vscode-node-azure-pack",
                 "GitHub.copilot",
+                "GitHub.copilot-chat",
                 "GitHub.vscode-github-actions",
                 "ms-dotnettools.vscode-dotnet-runtime",
                 "ms-dotnettools.csdevkit",
-                "ms-dotnetools.csharp"
+                "ms-dotnetools.csharp",
+                "ms-dotnettools.dotnet-interactive-vscode"
             ]
         }
     },
