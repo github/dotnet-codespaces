@@ -1,0 +1,31 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        // Define an array of integers to be sorted
+        int[] numbers = { 5, 2, 8, 3, 1, 9, 4, 6, 7 };
+
+        // Display the original array
+        Console.WriteLine("Original array:");
+        DisplayArray(numbers);
+
+        // Sort the array in ascending order
+        Array.Sort(numbers);
+
+        // Display the sorted array
+        Console.WriteLine("\nSorted array (ascending):");
+        DisplayArray(numbers);
+    }
+
+    // Helper method to display an array
+    static void DisplayArray(int[] arr)
+    {
+        foreach (var item in arr)
+        {
+            Console.Write(item + " ");
+        }
+        Console.WriteLine();
+    }
+}
