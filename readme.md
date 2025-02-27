@@ -1,8 +1,8 @@
-# GitHub Codespaces ♥️ .NET 8
+# GitHub Codespaces ♥️ .NET
 
 Want to try out the latest performance improvements coming with .NET 8 for web development? 
 
-This repo builds a Weather API using Minimal APIs, opens Swagger so you can call and test the API, and displays the data in a web application using Blazor with .NET 8. 
+This repo builds a Weather API using .NET APIs, opens Swagger so you can call and test the API, and displays the data in a web application using Blazor with .NET. 
 
 We've given you both a frontend and backend to play around with and where you go from here is up to you!
 
@@ -14,7 +14,7 @@ Everything you do here is contained within this one codespace. There is no repos
 [![Open in Dev Container](https://img.shields.io/static/v1?style=for-the-badge&label=Dev+Container&message=Open&color=blue&logo=visualstudiocode)](https://vscode.dev/redirect?url=vscode://ms-vscode-remote.remote-containers/cloneInVolume?url=https://github.com/github/dotnet-codespaces)
 
 You can also run this repository locally by following these instructions: 
-1. Clone the repo to your local machine `git clone https://github.com/bradygaster/dotnet-codespace`
+1. Clone the repo to your local machine `git clone https://github.com/github/dotnet-codespace`
 1. Open repo in VS Code
 
 ## Getting started
