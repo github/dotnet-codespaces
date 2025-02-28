@@ -8,25 +8,25 @@
 				"order": 1
 			},
             "configurations": [
-                "Back End",
-                "Front End"
+                "BackEnd",
+                "FrontEnd"
             ]
         }
     ],
     "configurations": [
         {
-            "name": "Back End",
+            "name": "BackEnd",
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build backend",
-            "program": "${workspaceFolder}/SampleApp/BackEnd/bin/Debug/net8.0/BackEnd.dll",
+            "program": "${workspaceFolder}/SampleApp/BackEnd/bin/Debug/net9.0/BackEnd.dll",
             "args": [],
             "cwd": "${workspaceFolder}/SampleApp/BackEnd",
             "stopAtEntry": false,
             "serverReadyAction": {
                 "action": "openExternally",
                 "pattern": "\\bNow listening on:\\s+(https?://\\S+)",
-                "uriFormat": "%s/swagger"
+                "uriFormat": "%s/scalar"
             },
             "env": {
                 "ASPNETCORE_ENVIRONMENT": "Development"
@@ -36,11 +36,11 @@
             }
         },
         {
-            "name": "Front End",
+            "name": "FrontEnd",
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build frontend",
-            "program": "${workspaceFolder}/SampleApp/FrontEnd/bin/Debug/net8.0/FrontEnd.dll",
+            "program": "${workspaceFolder}/SampleApp/FrontEnd/bin/Debug/net9.0/FrontEnd.dll",
             "args": [],
             "cwd": "${workspaceFolder}/SampleApp/FrontEnd",
             "stopAtEntry": false,
