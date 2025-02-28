@@ -7,6 +7,8 @@ var builder = WebApplication.CreateBuilder(args);
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi(options =>
 {
+    // current workaround for port forwarding in codespaces
+    // https://github.com/dotnet/aspnetcore/issues/57332
     options.AddDocumentTransformer((document, context, ct) =>
     {
         document.Servers = [];
