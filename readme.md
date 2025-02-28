@@ -1,8 +1,8 @@
 # GitHub Codespaces ♥️ .NET
 
-Want to try out the latest performance improvements coming with .NET 8 for web development? 
+Want to try out the latest performance improvements coming with .NET for web development? 
 
-This repo builds a Weather API and displays the data in a web application using Blazor with .NET. 
+This repo builds a Weather API, OpenAPI integration to test with [Scalar](https://learn.microsoft.com/aspnet/core/fundamentals/openapi/using-openapi-documents?view=aspnetcore-9.0#use-scalar-for-interactive-api-documentation), and displays the data in a web application using Blazor with .NET. 
 
 We've given you both a frontend and backend to play around with and where you go from here is up to you!
 
@@ -22,18 +22,20 @@ You can also run this repository locally by following these instructions:
 1. **📤 One-click setup**: [Open a new Codespace](https://codespaces.new/github/dotnet-codespaces), giving you a fully configured cloud developer environment.
 2. **▶️ Run all, one-click again**: Use VS Code's built-in *Run* command and open the forwarded ports *8080* and *8081* in your browser. 
 
-![](images/RunAll.png)
+![Debug menu in VS Code showing Run All](images/RunAll.png)
 
-3. The Blazor web app and Swagger tabs should now be open on your browser. On Swagger, click "Try it out" and "Execute" to call and test the API. 
+3. The Blazor web app and Scalar can be open by heading to **/scalar** in your browser. On Scalar, head to the backend API and click "Test Request" to call and test the API. 
 
-![](images/BlazorApp.png)
+![A website showing weather](images/BlazorApp.png)
+
+!["UI showing testing an API"](images/scalar.png)
 
 
 4. **🔄 Iterate quickly:** Codespaces updates the server on each save, and VS Code's debugger lets you dig into the code execution.
 
 5. To stop running, return to VS Code, and click Stop twice in the debug toolbar. 
 
-![](images/StopRun.png)
+![VS Code stop debuggin on both backend and frontend](images/StopRun.png)
 
 
 ## Contributing
