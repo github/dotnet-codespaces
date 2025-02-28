@@ -2,7 +2,7 @@
 
 Want to try out the latest performance improvements coming with .NET 8 for web development? 
 
-This repo builds a Weather API using .NET APIs, opens Swagger so you can call and test the API, and displays the data in a web application using Blazor with .NET. 
+This repo builds a Weather API and displays the data in a web application using Blazor with .NET. 
 
 We've given you both a frontend and backend to play around with and where you go from here is up to you!
 
@@ -27,7 +27,6 @@ You can also run this repository locally by following these instructions:
 3. The Blazor web app and Swagger tabs should now be open on your browser. On Swagger, click "Try it out" and "Execute" to call and test the API. 
 
 ![](images/BlazorApp.png)
-![](images/Swagger.png)
 
 
 4. **🔄 Iterate quickly:** Codespaces updates the server on each save, and VS Code's debugger lets you dig into the code execution.
