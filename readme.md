@@ -14,7 +14,7 @@ Everything you do here is contained within this one codespace. There is no repos
 [![Open in Dev Container](https://img.shields.io/static/v1?style=for-the-badge&label=Dev+Container&message=Open&color=blue&logo=visualstudiocode)](https://vscode.dev/redirect?url=vscode://ms-vscode-remote.remote-containers/cloneInVolume?url=https://github.com/github/dotnet-codespaces)
 
 You can also run this repository locally by following these instructions: 
-1. Clone the repo to your local machine `git clone https://github.com/github/dotnet-codespace`
+1. Clone the repo to your local machine `git clone https://github.com/github/dotnet-codespaces`
 1. Open repo in VS Code
 
 ## Getting started
