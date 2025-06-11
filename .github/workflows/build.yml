@@ -4,12 +4,17 @@ on:
   pull_request:
     branches:
       - main
+      
+
+
 
 permissions:
   contents: read
 
 jobs:
   build:
+    permissions:
+      contents: read
     name: Build All Projects
     runs-on: ubuntu-latest  
 
