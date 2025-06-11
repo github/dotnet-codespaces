@@ -12,8 +12,6 @@ jobs:
   build:
     permissions:
       contents: read
-    permissions:
-      contents: read
     name: Build All Projects
     runs-on: ubuntu-latest
 
