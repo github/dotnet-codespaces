@@ -1,0 +1,58 @@
+{
+  "training_examples": [
+    {
+      "intent": "GetWeatherForecast",
+      "input": "Show me the weather forecast starting July 10.",
+      "parameters": {
+        "startDate": "2025-07-10"
+      },
+      "expectedApiCall": "GET WeatherForecast?startDate=2025-07-10",
+      "expectedResponse": [
+        {
+          "Date": "2025-07-10",
+          "TemperatureC": 23,
+          "TemperatureF": 73,
+          "Summary": "Sunny"
+        },
+        {
+          "Date": "2025-07-11",
+          "TemperatureC": 21,
+          "TemperatureF": 70,
+          "Summary": "Cloudy"
+        }
+      ]
+    },
+    {
+      "intent": "GetWeatherForecast",
+      "input": "Weather forecast for next week?",
+      "parameters": {
+        "startDate": "2025-07-14"
+      },
+      "expectedApiCall": "GET WeatherForecast?startDate=2025-07-14",
+      "expectedResponse": "[ ...array of WeatherForecast objects for the week... ]"
+    },
+    {
+      "intent": "GetWeatherForecast",
+      "input": "Give me the forecast for today.",
+      "parameters": {
+        "startDate": "2025-07-09"
+      },
+      "expectedApiCall": "GET WeatherForecast?startDate=2025-07-09",
+      "expectedResponse": [
+        {
+          "Date": "2025-07-09",
+          "TemperatureC": 25,
+          "TemperatureF": 77,
+          "Summary": "Partly cloudy"
+        }
+      ]
+    },
+    {
+      "intent": "GetWeatherForecast",
+      "input": "What is the weather if I don't specify a date?",
+      "parameters": {},
+      "expectedApiCall": "GET WeatherForecast?startDate=",
+      "expectedResponse": "[ ...default forecast array... ]"
+    }
+  ]
+}
