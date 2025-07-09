@@ -56,6 +56,10 @@ FILES=(
 )
 
 for FILE in "${FILES[@]}"; do
+    # Remove comments from FILES array (bash does not support inline comments in arrays)
+    if [[ "$FILE" == \#* ]] || [[ -z "$FILE" ]]; then
+        continue
+    fi
     if [ ! -f "$BASE_DIR/$FILE" ]; then
         touch "$BASE_DIR/$FILE"
         echo "🌿 Created $FILE"
