@@ -1,0 +1,519 @@
+{
+  "intents": [
+    {
+      "name": "GetWeatherForecast",
+      "description": "Retrieve the weather forecast for a specific date, range, or location, including advanced options.",
+      "parameters": [
+        {
+          "name": "date",
+          "type": "date",
+          "required": false,
+          "description": "The date for which to get the weather forecast."
+        },
+        {
+          "name": "startDate",
+          "type": "date",
+          "required": false,
+          "description": "Start date for a range forecast."
+        },
+        {
+          "name": "endDate",
+          "type": "date",
+          "required": false,
+          "description": "End date for a range forecast."
+        },
+        {
+          "name": "location",
+          "type": "string",
+          "required": false,
+          "description": "The location for the weather forecast."
+        },
+        {
+          "name": "units",
+          "type": "string",
+          "required": false,
+          "description": "Units for temperature (Celsius, Fahrenheit, Kelvin)."
+        },
+        {
+          "name": "detailed",
+          "type": "boolean",
+          "required": false,
+          "description": "Whether to include detailed hourly or daily breakdowns."
+        },
+        {
+          "name": "language",
+          "type": "string",
+          "required": false,
+          "description": "Preferred language for the response."
+        }
+      ],
+      "responses": [
+        "The weather on {date} in {location} will be {summary} with a temperature of {temperatureC}°C ({temperatureF}°F).",
+        "Forecast for {date} in {location}: {summary}, {temperatureC}°C / {temperatureF}°F.",
+        "From {startDate} to {endDate} in {location}, expect {summary}. High: {maxTemperatureC}°C, Low: {minTemperatureC}°C.",
+        "Detailed forecast for {location} on {date}: {details}"
+      ],
+      "examples": [
+        "What's the weather like tomorrow?",
+        "Show me the forecast for New York on Friday.",
+        "Weather in Amsterdam next week.",
+        "Give me a detailed hourly forecast for Tokyo in Japanese.",
+        "What will the weather be in Paris from July 10 to July 15 in Fahrenheit?"
+      ]
+    },
+    {
+      "name": "SummarizeWeather",
+      "description": "Summarize the weather forecast for a given period, location, or trend analysis.",
+      "parameters": [
+        {
+          "name": "startDate",
+          "type": "date",
+          "required": true,
+          "description": "Start date of the period."
+        },
+        {
+          "name": "endDate",
+          "type": "date",
+          "required": true,
+          "description": "End date of the period."
+        },
+        {
+          "name": "location",
+          "type": "string",
+          "required": false,
+          "description": "The location for the summary."
+        },
+        {
+          "name": "trendAnalysis",
+          "type": "boolean",
+          "required": false,
+          "description": "Whether to include weather trends and anomalies."
+        },
+        {
+          "name": "units",
+          "type": "string",
+          "required": false,
+          "description": "Units for temperature (Celsius, Fahrenheit, Kelvin)."
+        }
+      ],
+      "responses": [
+        "From {startDate} to {endDate} in {location}, the weather will be mostly {summary}. Average temperature: {avgTemperatureC}°C ({avgTemperatureF}°F).",
+        "Trend analysis: {trendDetails}"
+      ],
+      "examples": [
+        "Summarize the weather for this week.",
+        "Give me a weather summary for Paris from Monday to Friday.",
+        "Show weather trends for Berlin in June.",
+        "Was there any unusual weather in London last month?"
+      ]
+    },
+    {
+      "name": "GetCannabisStrainInfo",
+      "description": "Retrieve detailed information about a specific cannabis strain, including effects, flavors, and medical uses.",
+      "parameters": [
+        {
+          "name": "strainName",
+          "type": "string",
+          "required": true,
+          "description": "The name of the cannabis strain."
+        },
+        {
+          "name": "infoType",
+          "type": "string",
+          "required": false,
+          "description": "Type of information (effects, flavors, medical, grow, genetics, etc.)."
+        },
+        {
+          "name": "language",
+          "type": "string",
+          "required": false,
+          "description": "Preferred language for the response."
+        }
+      ],
+      "responses": [
+        "{strainName}: {description} Effects: {effects}. Flavors: {flavors}. Medical uses: {medicalUses}.",
+        "Strain {strainName} details: {details}"
+      ],
+      "examples": [
+        "Tell me about Blue Dream.",
+        "What are the effects of OG Kush?",
+        "Describe the flavor profile of Gelato.",
+        "Medical uses for Harlequin?"
+      ]
+    },
+    {
+      "name": "FindDispensaries",
+      "description": "Find nearby cannabis dispensaries based on location, product, or rating.",
+      "parameters": [
+        {
+          "name": "location",
+          "type": "string",
+          "required": true,
+          "description": "The location to search for dispensaries."
+        },
+        {
+          "name": "productType",
+          "type": "string",
+          "required": false,
+          "description": "Type of product (flower, edibles, concentrates, etc.)."
+        },
+        {
+          "name": "minRating",
+          "type": "number",
+          "required": false,
+          "description": "Minimum rating for dispensaries."
+        },
+        {
+          "name": "openNow",
+          "type": "boolean",
+          "required": false,
+          "description": "Whether to only show currently open dispensaries."
+        }
+      ],
+      "responses": [
+        "Here are dispensaries near {location}: {dispensaryList}",
+        "Top-rated dispensaries in {location}: {topDispensaries}"
+      ],
+      "examples": [
+        "Find dispensaries near me.",
+        "Show me dispensaries in Denver with edibles.",
+        "Best rated dispensaries in Los Angeles open now."
+      ]
+    },
+    {
+      "name": "GetCannabisLaws",
+      "description": "Provide up-to-date cannabis laws and regulations for a specific location.",
+      "parameters": [
+        {
+          "name": "location",
+          "type": "string",
+          "required": true,
+          "description": "The location to get cannabis laws for."
+        },
+        {
+          "name": "lawType",
+          "type": "string",
+          "required": false,
+          "description": "Type of law (possession, cultivation, medical, recreational, etc.)."
+        },
+        {
+          "name": "language",
+          "type": "string",
+          "required": false,
+          "description": "Preferred language for the response."
+        }
+      ],
+      "responses": [
+        "Cannabis laws in {location}: {lawSummary}",
+        "In {location}, {lawType} laws: {lawDetails}"
+      ],
+      "examples": [
+        "What are the cannabis laws in California?",
+        "Is recreational cannabis legal in Canada?",
+        "Medical marijuana laws in Florida."
+      ]
+    },
+    {
+      "name": "SuggestCannabisProducts",
+      "description": "Suggest cannabis products based on user preferences, effects, or medical needs.",
+      "parameters": [
+        {
+          "name": "desiredEffects",
+          "type": "string",
+          "required": false,
+          "description": "Desired effects (relaxation, focus, pain relief, etc.)."
+        },
+        {
+          "name": "flavorProfile",
+          "type": "string",
+          "required": false,
+          "description": "Preferred flavor profile (citrus, earthy, sweet, etc.)."
+        },
+        {
+          "name": "medicalCondition",
+          "type": "string",
+          "required": false,
+          "description": "Medical condition to address."
+        },
+        {
+          "name": "productType",
+          "type": "string",
+          "required": false,
+          "description": "Type of product (flower, edible, tincture, etc.)."
+        }
+      ],
+      "responses": [
+        "Based on your preferences, try: {productList}",
+        "Recommended products for {medicalCondition}: {productList}"
+      ],
+      "examples": [
+        "Suggest a strain for anxiety.",
+        "What edible is good for sleep?",
+        "Best products for pain relief with citrus flavor."
+      ]
+    },
+    {
+      "name": "GetCannabisEvents",
+      "description": "Find cannabis-related events, expos, or festivals by location and date.",
+      "parameters": [
+        {
+          "name": "location",
+          "type": "string",
+          "required": false,
+          "description": "Location to search for events."
+        },
+        {
+          "name": "date",
+          "type": "date",
+          "required": false,
+          "description": "Date or date range for events."
+        },
+        {
+          "name": "eventType",
+          "type": "string",
+          "required": false,
+          "description": "Type of event (expo, festival, seminar, etc.)."
+        }
+      ],
+      "responses": [
+        "Upcoming cannabis events in {location} on {date}: {eventList}",
+        "No events found for your criteria."
+      ],
+      "examples": [
+        "Are there any cannabis expos in Las Vegas this month?",
+        "Find festivals in California this summer."
+      ]
+    },
+    {
+      "name": "GetGrowAdvice",
+      "description": "Provide advice for growing cannabis, including tips for indoor/outdoor, nutrients, and troubleshooting.",
+      "parameters": [
+        {
+          "name": "growType",
+          "type": "string",
+          "required": false,
+          "description": "Indoor or outdoor growing."
+        },
+        {
+          "name": "strainName",
+          "type": "string",
+          "required": false,
+          "description": "Strain to get specific advice for."
+        },
+        {
+          "name": "issue",
+          "type": "string",
+          "required": false,
+          "description": "Specific problem or question (e.g., yellow leaves, pests)."
+        }
+      ],
+      "responses": [
+        "Advice for {growType} growing {strainName}: {advice}",
+        "Troubleshooting {issue}: {solution}"
+      ],
+      "examples": [
+        "How do I grow OG Kush indoors?",
+        "Why are my cannabis leaves turning yellow?"
+      ]
+    },
+    {
+      "name": "GetProductReviews",
+      "description": "Retrieve reviews for cannabis products or dispensaries.",
+      "parameters": [
+        {
+          "name": "productName",
+          "type": "string",
+          "required": true,
+          "description": "Name of the product or dispensary."
+        },
+        {
+          "name": "reviewType",
+          "type": "string",
+          "required": false,
+          "description": "Type of review (user, expert, etc.)."
+        }
+      ],
+      "responses": [
+        "Reviews for {productName}: {reviewList}",
+        "No reviews found for {productName}."
+      ],
+      "examples": [
+        "Show reviews for Blue Dream flower.",
+        "What do people say about Green Leaf Dispensary?"
+      ]
+    },
+    {
+      "name": "GetCannabisNews",
+      "description": "Get the latest news about cannabis, legalization, research, and industry trends.",
+      "parameters": [
+        {
+          "name": "topic",
+          "type": "string",
+          "required": false,
+          "description": "Topic to filter news (legalization, research, business, etc.)."
+        },
+        {
+          "name": "location",
+          "type": "string",
+          "required": false,
+          "description": "Location to filter news."
+        }
+      ],
+      "responses": [
+        "Latest news on {topic} in {location}: {newsList}",
+        "No recent news found for your criteria."
+      ],
+      "examples": [
+        "What's new in cannabis research?",
+        "Show me cannabis legalization news in Germany."
+      ]
+    },
+    {
+      "name": "GetCannabisRecipes",
+      "description": "Suggest recipes for cannabis edibles, tinctures, or infusions.",
+      "parameters": [
+        {
+          "name": "recipeType",
+          "type": "string",
+          "required": false,
+          "description": "Type of recipe (edible, tincture, beverage, etc.)."
+        },
+        {
+          "name": "mainIngredient",
+          "type": "string",
+          "required": false,
+          "description": "Main ingredient to include."
+        },
+        {
+          "name": "dietaryPreference",
+          "type": "string",
+          "required": false,
+          "description": "Dietary preference (vegan, gluten-free, etc.)."
+        }
+      ],
+      "responses": [
+        "Here's a {recipeType} recipe: {recipeDetails}",
+        "Try this {dietaryPreference} edible: {recipeDetails}"
+      ],
+      "examples": [
+        "Give me a vegan cannabis brownie recipe.",
+        "How do I make a cannabis tincture?"
+      ]
+    },
+    {
+      "name": "GetWellnessTips",
+      "description": "Provide wellness and harm reduction tips for cannabis users.",
+      "parameters": [
+        {
+          "name": "topic",
+          "type": "string",
+          "required": false,
+          "description": "Wellness topic (sleep, anxiety, dosage, etc.)."
+        }
+      ],
+      "responses": [
+        "Wellness tip for {topic}: {tip}",
+        "General cannabis wellness advice: {tip}"
+      ],
+      "examples": [
+        "How can I use cannabis for better sleep?",
+        "Tips for safe cannabis consumption."
+      ]
+    },
+    {
+      "name": "GetStrainComparison",
+      "description": "Compare two or more cannabis strains by effects, flavors, and medical uses.",
+      "parameters": [
+        {
+          "name": "strainNames",
+          "type": "array",
+          "required": true,
+          "description": "List of strains to compare."
+        },
+        {
+          "name": "criteria",
+          "type": "string",
+          "required": false,
+          "description": "Comparison criteria (effects, flavor, grow, etc.)."
+        }
+      ],
+      "responses": [
+        "Comparison of {strainNames}: {comparisonDetails}"
+      ],
+      "examples": [
+        "Compare Blue Dream and Sour Diesel.",
+        "Which is better for pain: Harlequin or ACDC?"
+      ]
+    },
+    {
+      "name": "GetCannabisHistory",
+      "description": "Provide historical information about cannabis, its uses, and legalization timeline.",
+      "parameters": [
+        {
+          "name": "topic",
+          "type": "string",
+          "required": false,
+          "description": "Specific aspect of history (legalization, medical, cultural, etc.)."
+        },
+        {
+          "name": "location",
+          "type": "string",
+          "required": false,
+          "description": "Location to focus the history on."
+        }
+      ],
+      "responses": [
+        "History of cannabis in {location}: {historyDetails}",
+        "Timeline for {topic}: {timelineDetails}"
+      ],
+      "examples": [
+        "Tell me about the history of cannabis in India.",
+        "When was cannabis legalized in Canada?"
+      ]
+    },
+    {
+      "name": "GetCannabisSlang",
+      "description": "Explain cannabis-related slang or terminology.",
+      "parameters": [
+        {
+          "name": "term",
+          "type": "string",
+          "required": true,
+          "description": "Slang term or phrase to explain."
+        },
+        {
+          "name": "language",
+          "type": "string",
+          "required": false,
+          "description": "Preferred language for the explanation."
+        }
+      ],
+      "responses": [
+        "{term}: {definition}"
+      ],
+      "examples": [
+        "What does 'dank' mean?",
+        "Explain the term '710'."
+      ]
+    },
+    {
+      "name": "GetCannabisScience",
+      "description": "Provide scientific information about cannabinoids, terpenes, and the endocannabinoid system.",
+      "parameters": [
+        {
+          "name": "topic",
+          "type": "string",
+          "required": false,
+          "description": "Scientific topic (THC, CBD, terpenes, ECS, etc.)."
+        }
+      ],
+      "responses": [
+        "Scientific info on {topic}: {scienceDetails}"
+      ],
+      "examples": [
+        "What is the endocannabinoid system?",
+        "Tell me about terpenes in cannabis."
+      ]
+    }
+  ]
+}
