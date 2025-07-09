@@ -32,14 +32,14 @@ FILES=(
     "story_graph.json"
 )
 
-# Generate files
+# Generate files and set permissions
 for FILE in "${FILES[@]}"; do
     touch "$BASE_DIR/$FILE"
     chmod 777 "$BASE_DIR/$FILE"
     echo "🌿 Created $FILE"
 done
 
-# Set environment variables
+# Export environment variables
 echo "📦 Exporting environment variables..."
 echo "export GANJAGURU_HOME=$HOME/ganjaguru" >> ~/.bashrc
 echo "export TRAINING_DIR=$BASE_DIR" >> ~/.bashrc
