@@ -1,4 +1,6 @@
- #!/bin/bash
+#!/bin/bash
+
+set -e
 
 echo "🚀 Setting up GanjaGuru training suite..."
 
@@ -31,10 +33,16 @@ FILES=(
 )
 
 for FILE in "${FILES[@]}"; do
-    touch "$BASE_DIR/$FILE"
-    chmod 777 "$BASE_DIR/$FILE"
-    echo "🌿 Created $FILE"
+    if [ ! -f "$BASE_DIR/$FILE" ]; then
+        touch "$BASE_DIR/$FILE"
+        echo "🌿 Created $FILE"
+    else
+        echo "⚡ $FILE already exists"
+    fi
+    chmod 666 "$BASE_DIR/$FILE"
 done
+
+chmod 777 "$BASE_DIR"
 
 echo "📦 Exporting environment variables..."
 
@@ -52,7 +60,7 @@ if ! grep -q "GANJAGURU_HOME/bin" ~/.bashrc; then
 fi
 
 # Source the .bashrc in a subshell to avoid issues
-source ~/.bashrc
+bash -c 'source ~/.bashrc'
 
 cd "$HOME/ganjaguru" || exit
 if [ ! -d ".git" ]; then
