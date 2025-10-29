@@ -1,5 +1,7 @@
-{
-    "name": ".NET in Codespaces",
+{gh pr checkout 43
+    ipconfig
+    
+    "name": ".NET in Codespaces","ghcr.io/devcontainers-extra/features/activemq-sdkman:2": {}
     "image": "mcr.microsoft.com/dotnet/sdk:9.0",
     "features": {
         "ghcr.io/devcontainers/features/docker-in-docker:2": {},
