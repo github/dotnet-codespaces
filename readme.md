@@ -1,8 +1,8 @@
-# GitHub Codespaces ♥️ .NET
+# GitHub Codespaces ♥️ C#
 
-Want to try out the latest performance improvements coming with .NET for web development? 
+Want to try out C# for web development? 
 
-This repo builds a Weather API, OpenAPI integration to test with [Scalar](https://learn.microsoft.com/aspnet/core/fundamentals/openapi/using-openapi-documents?view=aspnetcore-10.0#use-scalar-for-interactive-api-documentation), and displays the data in a web application using Blazor with .NET. 
+This repo builds a Weather API, OpenAPI integration to test with [Scalar](https://learn.microsoft.com/aspnet/core/fundamentals/openapi/using-openapi-documents?view=aspnetcore-10.0#use-scalar-for-interactive-api-documentation), and displays the data in a web application using Blazor with C#. 
 
 We've given you both a frontend and backend to play around with and where you go from here is up to you!
 
