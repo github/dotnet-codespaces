@@ -1,6 +1,6 @@
 {
     "name": ".NET in Codespaces",
-    "image": "mcr.microsoft.com/dotnet/sdk:9.0",
+    "image": "mcr.microsoft.com/dotnet/sdk:10.0",
     "features": {
         "ghcr.io/devcontainers/features/docker-in-docker:2": {},
         "ghcr.io/devcontainers/features/github-cli:1": {
@@ -15,8 +15,8 @@
         "ghcr.io/devcontainers/features/common-utils:2": {},
         "ghcr.io/devcontainers/features/dotnet:2": {
             "version": "none",
-            "dotnetRuntimeVersions": "8.0",
-            "aspNetCoreRuntimeVersions": "8.0"
+            "dotnetRuntimeVersions": "10.0",
+            "aspNetCoreRuntimeVersions": "10.0"
         }
     },
     "customizations": {
@@ -40,7 +40,7 @@
     },
     "remoteEnv": {
         "DOTNET_MULTILEVEL_LOOKUP": "0",
-        "TARGET": "net9.0"
+        "TARGET": "net10.0"
     },
     "portsAttributes": {
         "8080": {
